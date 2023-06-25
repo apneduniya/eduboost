@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "EduBoost",
+    "description": "Extension to reminder you to keep working on any work your doing right now.",
+    "version": "1.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["script.js"]
+        }
+    ],
+    "permissions": [
+        "notifications",
+        "storage",
+        "alarms",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
